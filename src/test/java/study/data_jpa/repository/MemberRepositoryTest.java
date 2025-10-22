@@ -118,7 +118,19 @@ class MemberRepositoryTest {
         for (Member member : result) {
             System.out.println("member = " + member);
         }
+    }
 
+    @Test
+    public void returnType() {
+        Member m1 = new Member("AAA", 10);
+        Member m2 = new Member("BBB", 20);
+        memberRepository.save(m1);
+        memberRepository.save(m2);
 
+        List<Member> result = memberRepository.findListByUsername("AqnqlaA");
+        System.out.println("result = " + result.size()); // null 아님. JPA에서 빈컬렉션 세팅
+
+        Member result2 = memberRepository.findMemberByUsername("AqnqlaA");
+        System.out.println("result2 = " + result2); // null임
     }
 }
