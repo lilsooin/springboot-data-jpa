@@ -153,6 +153,7 @@ class MemberRepositoryTest {
         // when
         Page<Member> page = memberRepository.findByAge(age, pageRequest);
 
+        // response시 DTO로 꼭 변환해줘야함findByUsernameAndAgeGreaterThan
         Page<MemberDto> toMap = page.map(member ->
                 new MemberDto(member.getId(), member.getUsername(), null));
 
