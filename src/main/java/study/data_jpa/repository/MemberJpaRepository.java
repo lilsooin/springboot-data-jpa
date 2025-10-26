@@ -77,6 +77,5 @@ public class MemberJpaRepository {
                         " where m.age >= :age")
                 .setParameter("age", age)
                 .executeUpdate();
-
     }
 }
