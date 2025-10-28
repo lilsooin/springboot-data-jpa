@@ -305,6 +305,7 @@ class MemberRepositoryTest {
         Specification<Member> spec = MemberSpec.username("m1").and(MemberSpec.teamName("teamA"));
         List<Member> result = memberRepository.findAll(spec);
 
+        // then
         Assertions.assertThat(result.size()).isEqualTo(1);
     }
 }
