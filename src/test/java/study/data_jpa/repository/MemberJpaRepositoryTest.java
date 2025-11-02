@@ -14,7 +14,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest
 @Transactional
 @Rollback(value = false)
-        // default test는 트랙잭션 결과 rollback 해준다(commit 안함)
+// default test는 트랙잭션 결과 rollback 해준다(commit 안함)
 class MemberJpaRepositoryTest {
 
     @Autowired
